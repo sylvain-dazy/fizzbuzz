@@ -16,6 +16,6 @@ class FizzBuzzPresenter
     present(generatedFizzBuzzList : List<String>) : String
 
 main(int n) {
-    print(new FizzBuzzConsolPresenter().present(new FizzBuzzGenerator().generate(n)))
+    print(new FizzBuzzPresenter().present(new FizzBuzzGenerator().generate(n)))
 }
 
