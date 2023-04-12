@@ -19,4 +19,10 @@ public class GenerateFizzBuzzSequenceTest {
         assertEquals("fizz", generator.generate(3));
         assertEquals("fizz", generator.generate(6));
     }
+
+    @Test
+    public void multipleOf5ShouldBeTransformedToBuzz() {
+        assertEquals("buzz", generator.generate(5));
+        assertEquals("buzz", generator.generate(10));
+    }
 }
