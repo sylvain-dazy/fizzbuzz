@@ -9,17 +9,14 @@ public class GenerateFizzBuzzSequenceTest {
     private FizzBuzzGenerator generator = new FizzBuzzGenerator();
 
     @Test
-    public void testNothing() {
-        assertEquals(1, 1);
-    }
-
-    @Test
-    public void testOneisOne() {
+    public void numberShouldBeTransformedToString() {
         assertEquals("1", generator.generate(1));
+        assertEquals("2", generator.generate(2));
     }
 
     @Test
-    public void test2is2() {
-        assertEquals("2", generator.generate(2));
+    public void multipleOf3ShouldBeTransformedToFizz() {
+        assertEquals("fizz", generator.generate(3));
+        assertEquals("fizz", generator.generate(6));
     }
 }
