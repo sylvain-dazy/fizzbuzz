@@ -6,7 +6,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
 
     @Test
-    void appHasAGreeting() {
-        assertEquals("Hello World!", new App().getGreeting(), "app should have a greeting");
+    void appTitleIsFizzbuzz() {
+        assertEquals("Fizzbuzz", App.getTitle());
+    }
+
+    @Test
+    void appPresentFizzbuzzSequence() {
+        assertEquals("1, 2, fizz", App.fizzbuzzSequence(3));
+    }
+
+    @Test
+    void appTestMain() {
+        App.main(new String[] {"App"});
     }
 }
