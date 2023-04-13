@@ -1,4 +1,4 @@
-# fizzbuzz
+## Fizzbuzz
 
 # Overview
 
