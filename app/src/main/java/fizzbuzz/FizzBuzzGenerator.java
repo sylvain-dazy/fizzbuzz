@@ -5,21 +5,28 @@ import java.util.List;
 
 public class FizzBuzzGenerator {
 
+    /**
+     * Generate the Fizzbuzz sequence of numbers ranging from 1 to n
+     * @param n
+     */
     public List<String> generate(int n) {
         List<String> sequence = new LinkedList<>();
         for (int i = 1; i <= n; i++)
-            sequence.add(transformToFizzBuzz(i));
+            sequence.add(fizzbuzzValueOf(i));
         return sequence;
     }
 
-    private String transformToFizzBuzz(int n) {
-        if (isMultipleOf5(n)) {
+    private String fizzbuzzValueOf(int number) {
+        if (isMultipleOf3(number) && isMultipleOf5(number)) {
+            return "fizzbuzz";
+        }
+        if (isMultipleOf5(number)) {
             return "buzz";
         }
-        if (isMultipleOf3(n)) {
+        if (isMultipleOf3(number)) {
             return "fizz";
         }
-        return String.valueOf(n);
+        return String.valueOf(number);
     }
 
     private boolean isMultipleOf5(int n) {
