@@ -7,7 +7,8 @@ public class FizzBuzzGenerator {
 
     public List<String> generate(int n) {
         List<String> sequence = new LinkedList<>();
-        sequence.add(transformToFizzBuzz(n));
+        for (int i = 1; i <= n; i++)
+            sequence.add(transformToFizzBuzz(i));
         return sequence;
     }
 
