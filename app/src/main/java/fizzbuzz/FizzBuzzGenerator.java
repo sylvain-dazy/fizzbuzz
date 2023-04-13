@@ -1,8 +1,17 @@
 package fizzbuzz;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class FizzBuzzGenerator {
 
-    public String generate(int n) {
+    public List<String> generate(int n) {
+        List<String> sequence = new LinkedList<>();
+        sequence.add(transformToFizzBuzz(n));
+        return sequence;
+    }
+
+    private String transformToFizzBuzz(int n) {
         if (isMultipleOf5(n)) {
             return "buzz";
         }
